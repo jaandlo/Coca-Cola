@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+#main{
+    display: flex; 
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    background-image: url('https://www.coca-cola.com/content/dam/onexp/tw/zh/homepage/coca-cola-siente-el-sabor-amigos-1800x700.jpg');
+    background-size: cover;
+    
+}
+
+.header{
+    backdrop-filter: blur(10px); /*Propiedad para agregar un filtro de desenfoque*/
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 70px;
+    align-items: normal;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px black;
+    margin-top: 10px;
+}
+
+.logo{
+    height: 60%;
+    margin: 15px;
+}
+
+.contenedorItems{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.contenedorItems div{
+    display: flex;
+    justify-content: center; /*Propiedad para centrar horizontalmente su componente hijo*/
+}
+
+.subContItem {
+    display: flex;
+    align-items: center; /*Propiedad para centrar verticalmente su componente hijo*/
+    text-decoration: none;
+    color: black !important ;
+}
+
+.item {
+    text-transform: capitalize; /*Propiedad para cambiar el texto a Capitalizado*/
+    margin: 0;
+    font-weight: 500; /*Propiedad para cambiar el grosor del texto*/
+    font-size: 1rem; /*Propiedad para cambiar el tamaño del texto*/
+    padding: 10px 30px;
+}
+
+.item:hover{
+    cursor: pointer; /*Propiedad para cambiar el cursor del mouse*/
+    color: #e81729ff; /*Propiedad para cambiar el color del texto*/
+    background-color: transparent; /*Propiedad para cambiar el color de fondo*/
+    border-radius: 10px; /*Propiedad para cambiar el radio de las esquinas */
+    box-shadow: 5px 5px 10px 0px black; /*Propiedad para agregar sombra*/
+    transition: 0.3s;  /*Propiedad para agregar una transición*/
+}
+
+section{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 10px;
+}
+
+section h1{
+    font-size: 72pt; 
+    line-height: 80px;
+    font-weight: 900;
+    color: #e6e6e6;
+    width: 600px;
+    margin-left: 100px;
+   
+}
+
+.interfaz{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    width: 70%;
+    
+}
+.card{
+    display:flex;
+    flex-direction: Column;
+    align-items: center;
+    width: 280px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 60px;
+    box-shadow: 5px 5px 10px 5px black;
+    backdrop-filter: blur(10px);
+}
+
+.cocacola_producto{
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    margin: 10px;
+}
+
+.cocacola_producto:hover{
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.card h4{
+    font-size: 18pt;
+    line-height: 5px;
+    text-transform: uppercase;
+    color: rgb(219, 4, 0);
+    text-shadow: 5px 5px black;
+    
+}
+
+.card p{
+    font-size: 14pt;
+    line-height: 2px;
+    text-align: center;
+    font-weight: 500;
+    color: antiquewhite;
+    text-shadow: 2px 2px rgb(171, 0, 0);
+}
+
+.card:hover{
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.payboton{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px 0px black;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    text-transform:uppercase;
+    color: antiquewhite;
+}
+
+.textboton{
+    text-decoration: none;
+}
+
+#interfaz{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    
+}
+
+.imgasesor{
+    display: flex;
+    justify-content: start;
+    width: 1230px;
+    height: 70px;
+    object-fit:cover;
+    
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.lineas{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+    flex-direction: row; 
+    border-radius: 5px;
+    
+
+}
+
+.CardC{
+    backdrop-filter: blur(20px);
+    display: flex;
+    padding: 30px;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px black;
+
+}
+
+.Contact_region{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    width: 100%;
+    height: 100px;
+}
+
+.banderaCont{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.dataC{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%; 
+    height: 60%;
+    font-size: 12pt; 
+    background-color: blueviolet;
+}
+
+.dataC p{
+    margin: 0;
+}
