@@ -72,21 +72,33 @@ body {
 }
 
 section{
-    width: 90%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
-    height: 100%;
-    margin-top: 10px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 section h1{
     font-size: 72pt; 
     line-height: 80px;
     font-weight: 900;
-    color: #e6e6e6;
-    width: 600px;
-    margin-left: 100px;
-   
+    color: beige;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px black; /*Propiedad para agregar una sombra al texto*/
+}
+
+@keyframes moverTexto {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(50px);
+    }   
 }
 
 .interfaz{
@@ -166,7 +178,6 @@ section h1{
     display:flex;
     justify-content: space-between;
     flex-direction: column;
-
     
 }
 
@@ -247,4 +258,107 @@ section h1{
     font-size: 14pt;
     text-transform:capitalize;
     text-shadow: 0.5px 0.5px black;
+}
+
+#miBoton {
+    background: linear-gradient(90deg, #ff1744 0%, #ffd600 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 18px 40px;
+    margin-top: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#miBoton:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,23,68,0.3);
+    background: linear-gradient(90deg, #ffd600 0%, #ff1744 100%);
+}
+
+/* --- ESTILOS EXCLUSIVOS PARA promociones.html --- */
+.promociones-bg {
+    background: linear-gradient(120deg, #ff1744 0%, #ffd600 100%);
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.promo-banner {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 8px 32px rgba(255,23,68,0.2);
+    margin-bottom: 20px;
+}
+
+.motivacion {
+    text-align: center;
+    color: #fff;
+    margin: 40px 0 20px 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px #ff1744;
+    letter-spacing: 1px;
+    animation: motivar 2s infinite alternate;
+}
+@keyframes motivar {
+    0% { text-shadow: 2px 2px 8px #ff1744; transform: scale(1);}
+    100% { text-shadow: 2px 2px 16px #ffd600; transform: scale(1.04);}
+}
+
+.promo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.promo-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255,23,68,0.12);
+    padding: 30px 24px;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid #ffd600;
+    position: relative;
+    overflow: hidden;
+}
+.promo-card::before {
+    content: "";
+    position: absolute;
+    top: -40px; left: -40px;
+    width: 80px; height: 80px;
+    background: radial-gradient(circle, #ffd600 60%, transparent 100%);
+    opacity: 0.15;
+    z-index: 0;
+}
+.promo-card:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,23,68,0.18);
+    border-color: #ff1744;
+}
+.promo-card img {
+    width: 90px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 2px 8px #ffd60088);
+}
+.promo-card h3 {
+    color: #ff1744;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    z-index: 1;
+    position: relative;
+}
+.promo-card p {
+    color: #222;
+    font-size: 1.1rem;
+    z-index: 1;
+    position: relative;
 }
